@@ -10,7 +10,7 @@ def gen_cmd(py_file_path):
         cmd_file.write('@echo off\n')
         cmd_file.write(f'python "{py_file_path}" %*')
 
-    print(f'{cmd_file_path} has been created.')
+    print(f'_{base_name} command has been created.')
 
 def process_folder(folder_path, queue):
     python_files = [f.path for f in os.scandir(folder_path) if f.is_file() and f.name.endswith('.py')]
