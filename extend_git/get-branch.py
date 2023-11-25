@@ -10,7 +10,7 @@ def get_branch(branch_name):
     except subprocess.CalledProcessError as e:
         print(f"Git get_branch and checkout ERROR : {e.output.splitlines()[0]}")
 
-if len(sys.argv) < 1:
+if len(sys.argv) < 2:
     print("add branch_name as arg")
 else:
     get_branch(sys.argv[1])

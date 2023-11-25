@@ -8,7 +8,7 @@ def gen_cmd(shorthand):
 
     print(f'{cmd_file_path} has been created.')
 
-if len(sys.argv) < 1:
+if len(sys.argv) < 2:
     print("add shorthand as arg")
 else:
     gen_cmd(sys.argv[1])
