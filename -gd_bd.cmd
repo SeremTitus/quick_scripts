@@ -1,2 +1,2 @@
 @echo off
-scons target=editor vsproj=yes dev_build=yes -j2 %*
+scons target=editor vsproj=yes dev_build=yes %*
