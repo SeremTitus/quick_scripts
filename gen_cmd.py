@@ -5,7 +5,7 @@ from queue import Queue
 
 def gen_cmd(py_file_path):
     base_name = os.path.splitext(os.path.basename(py_file_path))[0]
-    cmd_file_path = os.getcwd()+ '\\_'+ base_name + '.cmd'
+    cmd_file_path = '_'+ base_name + '.cmd'
     with open(cmd_file_path, 'w') as cmd_file:
         cmd_file.write('@echo off\n')
         cmd_file.write(f'python "{py_file_path}" %*')
