@@ -1,7 +1,7 @@
 import sys
 import os
 def gen_cmd(shorthand):
-    cmd_file_path ='_'+ shorthand + '.cmd'
+    cmd_file_path = os.path.dirname(os.path.dirname(sys.argv[0])) + '\\_'+ shorthand + '.cmd'
     with open(cmd_file_path, 'w') as cmd_file:
         cmd_file.write('@echo off\n')
         cmd_file.write(f'cd "{os.getcwd()}"')
