@@ -17,14 +17,14 @@ def process_folder(folder_path, queue):
     for python_file in python_files:
         gen_cmd(python_file)
     try:
-        subfolders = [f.path for f in os.scandir(folder_path) if f.is_dir()]
+        subfolders = [f.path for f in os.scandir(folder_path) if f.is_dir() and not f.name.startswith('.')]
         for subfolder in subfolders:
             queue.put(subfolder)
     except:
         print(f"Access is denied: {folder_path}")
 
 
-starting_folder = sys.argv[0]
+starting_folder = os.path.dirname(sys.argv[0])
 
 if len(sys.argv) > 1:
     starting_folder = os.getcwd()
