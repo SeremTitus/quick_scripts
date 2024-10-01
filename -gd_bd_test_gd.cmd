@@ -1,2 +1,2 @@
 @echo off
--gd_bd_run.cmd --test -ts="*[GDScript]*"
+"C:\Users\Serem\Development\c\godot\bin\godot.windows.editor.dev.x86_64.exe" --test -ts="*[GDScript]*"

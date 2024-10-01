@@ -17,6 +17,7 @@ for /l %%i in (1,1,1000000) do (
             echo Godot crash -- any key to continue
             pause
         )
+        -gd_bd_test_gd
     ) else (
         powershell -c "[console]::Beep(1000, 1000)"
         echo Build failed -- any key to continue
