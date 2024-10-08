@@ -17,7 +17,7 @@ try:
         max_var = start_var + int(sys.argv[1])
     while (True):
         start_var = int(subprocess.check_output(['git', 'rev-list', 'HEAD', '--count'], cwd=os.getcwd(), stderr=subprocess.STDOUT, universal_newlines=True))
-        if ((start_var > max_var) or (start_var > int(remote_size))):
+        if (start_var > max_var):# or (start_var > int(remote_size)):
             break
         start_var += 1
         try:
